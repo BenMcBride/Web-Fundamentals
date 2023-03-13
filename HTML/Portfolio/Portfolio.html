@@ -2,12 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Benjamin McBride's programming portfolio website">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
 </head>
 <body>
   <h1>Benjamin McBride</h1>
-  <div><img src="" alt=""></div>
+  <div>
+    <img src="ProfilePic.jpg" alt="picture of benjamin mcbride">
+  </div>
+  <div>
+    <img src="github_icon.png" alt="github icon">
+    <a href="https://github.com/BenMcBride">My Github</a>
+    <img src="linkedin_Icon.png" alt="linkedin icon">
+    <a href="https://www.linkedin.com/in/benjamin-mcbride-125a4a269/">My Linkedin</a>
+    <img src="email_icon.png" alt="email icon">
+    <a href="bjmcbride2@gmail.com">My Email</a>
+  </div>
+  <h2>Technologies</h2>
+  <div>
+    <table>
+      <tr>
+        <th>Front-End</th>
+        <th>Python</th>
+        <th>JavaScript</th>
+        <th>Database</th>
+        <th>Concepts</th>
+      </tr>
+      <tr>
+        <th>HTML5</th>
+        <th>Django</th>
+        <th>Express</th>
+        <th>MySQL</th>
+        <th>AJAX</th>
+      </tr>
+      <tr>
+        <th>CSS3</th>
+        <th>Flask</th>
+        <th>Mongoose</th>
+        <th>MongoDB</th>
+        <th>OOP</th>
+      </tr>
+      <tr>
+        <th>Bootstrap</th>
+        <th>Unitest</th>
+        <th>React</th>
+        <th></th>
+        <th>REST</th>
+      </tr>
+    </table>
+  </div>
+  <h2>Projects</h2>
+  <div>
+    <ul>
+      <li>project 1</li>
+      <li>project 2</li>
+      <li>project 3</li>
+    </ul>
+  </div>
+  <h2>Contact Me</h2>
+  <form action="/process" method="post">
+    <div>
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name">
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email">
+    </div>
+    <div>
+      <label for="message">Message: </label>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Send Message">
+    </div>
+  </form>
 </body>
 </html>
