@@ -1,0 +1,30 @@
+body {
+  background-color: grey;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  height: 180px;
+  margin: 10px;
+}
+.top {
+  min-height: 200px;
+  min-width: 900px;
+  background-color: rgb(202, 0, 0);
+}
+.middle {
+  display: flex;
+  min-height: 200px;
+  min-width: 900px;
+  background-color: white;
+  justify-content: center;
+}
+.bottom {
+  min-height: 200px;
+  min-width: 900px;
+  background-color: black;
+}
