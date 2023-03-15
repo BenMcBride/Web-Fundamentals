@@ -1,0 +1,22 @@
+/* grey background for my eyeball's sake */
+body {
+  background-color: grey;
+}
+.row {
+  display: flex;
+}
+.col {
+  text-align: center;
+  background-color: rgb(93, 93, 255);
+  flex: 1;
+}
+.col-2 {
+  text-align: center;
+  background-color: rgb(139, 255, 93);
+  flex: 2;
+}
+.col-3 {
+  text-align: center;
+  background-color: rgb(255, 93, 93);
+  flex: 3;
+}
