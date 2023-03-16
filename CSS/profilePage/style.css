@@ -12,7 +12,7 @@ img {
   margin: 10px 12px 0 7px;
 }
 h1 {
-  font-weight: 700;
+  font-weight: 600;
 }
 p {
   font-size: large;
@@ -43,6 +43,8 @@ a {
 .nav a {
   text-decoration: none;
   color: white;
+  padding-left: 80px;
+  padding-right: 60px;
 }
 .nav a:hover {
   color: #17a2b8;
@@ -68,7 +70,7 @@ a {
 }
 .main {
   display: flex;
-  padding: 20px;
+  padding: 20px 100px;
   justify-content: center;
 }
 .main-left {
@@ -81,7 +83,6 @@ a {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-
 }
 .friends {
   margin-top: 20px;
@@ -192,7 +193,7 @@ a {
   height: 160px;
   aspect-ratio: 1/1;
   position: absolute;
-  top: 45px;
+  top: 57px;
   left: 60px;
   border: 4px solid white;
   border-radius: 50%;
@@ -226,6 +227,7 @@ a {
   font-size: 50px;
   padding: 5px;
   cursor: pointer;
+  color: #808080;
 }
 .requests-bot {
   display: flex;
