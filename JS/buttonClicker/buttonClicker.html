@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
@@ -15,9 +16,7 @@
       <div class="head title"><h1>Dojonary</h1></div>
       <div><input class="search" type="text" placeholder=" Search"></div>
       <div class="logbtn">
-        <a href="buttonClicker.html">
-          <button name="logout" type="button" class="btn logout">Login</button>
-        </a>
+          <button id="logout" type="button" onclick="logout(this)" class="btn logout">Login</button>
       </div>
     </div>
     <div class="main">
@@ -33,7 +32,7 @@
             <div class="plural">
               <h3>Plural: <em>ninjas</em></h3>
             </div>
-            <button class="btn like">13 likes</button>
+            <button class="btn like" onclick="alert('Ninja was liked')">13 likes</button>
           </div>
           <div class="left-right">
             <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjustsu</a></p>
@@ -50,7 +49,7 @@
             <div class="plural">
               <h3>Plural: <em>ninjas</em></h3>
             </div>
-            <button class="btn like">37 likes</button>
+            <button class="btn like" onclick="alert('Ninja was liked')">37 likes</button>
           </div>
           <div class="left-right">
             <p>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
@@ -59,9 +58,9 @@
       </div>
       <div class="main-right">
         <div class="right box">
-          <h2>Dojonary is defined by YOU</h2>
+          <h2>Dojonary is defined by <strong>YOU</strong></h2>
           <div class="right-bot">
-            <button class="btn def">Add Definition</button>
+            <button class="btn def" onclick="hide(this)">Add Definition</button>
           </div>
 
         </div>
