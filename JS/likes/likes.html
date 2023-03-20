@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Likes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="head title"><h1>Dojonary</h1></div>
+    </div>
+    <h1 class="feed">Your Feed</h1>
+    <div class="main">
+      <div class="right box">
+        <div>
+          <i class="profile-pic bi bi-person-circle"></i>
+        </div>
+        <h3><a href="#">Add an avatar</a></h3>
+        <h2>Benjamin McBride</h2>
+      </div>
+      <div class="main-right">
+        <div class="left box left-top">
+          <div class="left-left">
+            <div class="title">
+              <h1>Timothy Johnson</h1>
+            </div>
+            <div class="subtitle">
+              <h2><p id="top-likes">0</p> like(s)</h2>
+            </div>
+            <button class="btn like" onclick="like('#top-likes')">Like</button>
+          </div>
+          <div class="left-right">
+            <p>I just set up this new discord bot, let me know what you all think. <a href="#">link</a></p>
+          </div>
+        </div>
+        <div class="left box left-mid">
+          <div class="left-left">
+            <div class="title">
+              <h1>Devin Lozano</h1>
+            </div>
+            <div class="subtitle">
+              <h2><p id="mid-likes">0</p> like(s)</h2>
+            </div>
+            <button class="btn like" onclick="like('#mid-likes')">Like</button>
+          </div>
+          <div class="left-right">
+            <p>Just finished my <a href="#">next comic</a>, check it out.</p>
+          </div>
+        </div>
+        <div class="left box left-bot">
+          <div class="left-left">
+            <div class="title">
+              <h1>Jack Ohrn</h1>
+            </div>
+            <div class="subtitle">
+              <h2><p id="bot-likes">0</p> like(s)</h2>
+            </div>
+            <button class="btn like" onclick="like('#bot-likes')">Like</button>
+          </div>
+          <div class="left-right">
+            <p>I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</p>
+          </div>
+        </div>
+      </div>        
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

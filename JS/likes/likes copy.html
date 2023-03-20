@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Likes Copy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="head title"><h1>Dojonary</h1></div>
+      <div><input class="search" type="text" placeholder=" Search"></div>
+      <div class="logbtn">
+          <button id="logout" type="button" onclick="logout(this)" class="btn logout">Login</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main-left">
+        <div class="left box left-top">
+          <div class="left-left">
+            <div class="title">
+              <h1>ninja</h1>
+            </div>
+            <div class="subtitle">
+              <h2>noun</h2>
+            </div>
+            <div class="plural">
+              <h3>Plural: <em>ninjas</em></h3>
+            </div>
+            <button class="btn like" onclick="alert('Ninja was liked')">13 likes</button>
+          </div>
+          <div class="left-right">
+            <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjustsu</a></p>
+          </div>
+        </div>
+        <div class="left box left-bot">
+          <div class="left-left">
+            <div class="title">
+              <h1>ninja</h1>
+            </div>
+            <div class="subtitle">
+              <h2>noun</h2>
+            </div>
+            <div class="plural">
+              <h3>Plural: <em>ninjas</em></h3>
+            </div>
+            <button class="btn like" onclick="alert('Ninja was liked')">37 likes</button>
+          </div>
+          <div class="left-right">
+            <p>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="right box">
+          <h2>Dojonary is defined by <strong>YOU</strong></h2>
+          <div class="right-bot">
+            <button class="btn def" onclick="hide(this)">Add Definition</button>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
