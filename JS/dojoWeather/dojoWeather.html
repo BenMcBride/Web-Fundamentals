@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+    <div class="nav flex-between">
+        <div class="title">
+            <h1>DojoWeather</h1>
+        </div>
+        <div class="cities">
+            <h4 onclick="alert('Loading weather report...')">Seattle</h4>
+            <h4 onclick="alert('Loading weather report...')">Friday Harbor</h4>
+            <h4 onclick="alert('Loading weather report...')">Victoria</h4>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-top flex-between">
+            <div class="top-left">
+                <h2>Seattle</h2>
+            </div>
+            <div class="top-right flex-between">
+                <p>show temperature in: </p>
+                <select onchange="convert(this)" name="temperature" id="temperature">
+                    <option value="c">ºC</option>
+                    <option value="f">ºF</option>
+                </select>
+            </div>
+        </div>
+        <div class="days flex-between">
+            <div class="today day">
+                <div class="day-name"><h3>Today</h3></div>
+                <div class="weather-img">
+                    <img src="assets/some_rain.png" alt="rain" />
+                </div>
+                <div class="weather-description">some rain</div>
+                <div class="high-low">
+                    <div class="space">
+                        <div class="high degrees-high">24</div><p class="degrees-high">º</p>
+                    </div>
+                    <div class="space">
+                        <div class="low degrees-low">18</div><p class="degrees-low">º</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tomorrow day">
+                <div class="day-name"><h3>Tomorrow</h3></div>
+                <div class="weather-img">
+                    <img src="assets/some_sun.png" alt="sun" />
+                </div>
+                <div class="weather-description">some rain</div>
+                <div class="high-low">
+                    <div class="space">
+                        <div class="high degrees-high">27</div><p class="degrees-high">º</p>
+                    </div>
+                    <div class="space">
+                        <div class="low degrees-low">19</div><p class="degrees-low">º</p>
+                    </div>
+                </div>
+            </div>
+            <div class="friday day">
+                <div class="day-name"><h3>Friday</h3></div>
+                <div class="weather-img">
+                    <img src="assets/some_clouds.png" alt="clouds" />
+                </div>
+                <div class="weather-description">some rain</div>
+                <div class="high-low">
+                    <div class="space">
+                        <div class="high degrees-high">21</div><p class="degrees-high">º</p>
+                    </div>
+                    <div class="space">
+                        <div class="low degrees-low">16</div><p class="degrees-low">º</p>
+                    </div>
+                </div>
+            </div>
+            <div class="saturday day">
+                <div class="day-name"><h3>Saturday</h3></div>
+                <div class="weather-img">
+                    <img src="assets/some_sun.png" alt="sun" />
+                </div>
+                <div class="weather-description">some sun</div>
+                <div class="high-low">
+                    <div class="space">
+                        <div class="high degrees-high">26</div><p class="degrees-high">º</p>
+                    </div>
+                    <div class="space">
+                        <div class="low degrees-low">21</div><p class="degrees-low">º</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cookie">
+        <div class="cookie-img">
+            <img src="assets/cookie.png" alt="cookie">
+        </div>
+        <div class="cookie-text">
+            <h3>Stop! Cookie time</h3>
+            <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+        </div>
+        <div class="cookie-accept"><button onclick="hide('.cookie')" class="accept">I Accept</button></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

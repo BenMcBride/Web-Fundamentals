@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap");
+
+/* Global CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  font-family: "Signika", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-right: 10px;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Big containers */
+
+.nav {
+  /* flex-between */
+  background-color: #9fc5f8;
+  padding: 10px 100px;
+  color: white;
+  max-width: 1200px;
+  min-width: 820px;
+  margin: 0 auto;
+}
+
+.main {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Nav elements */
+
+.cities {
+  min-width: 500px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.cities h4 {
+  padding-left: 60px;
+  cursor: pointer;
+}
+
+/* Main elements */
+
+.main-top {
+  /* flex-between */
+  margin: 0 100px;
+  padding: 20px 0;
+  border-bottom: solid black;
+  min-width: 820px;
+}
+
+.days {
+  /* flex-between */
+  padding: 20px 100px;
+}
+
+/* Main-Top elements */
+
+.top-right select {
+  width: 3rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 2px solid black;
+}
+
+/* Main-Days (Main-bottom) elements */
+
+.day {
+  background-color: #eeeeee;
+  padding: 20px;
+  text-align: center;
+  min-width: 150px;
+  margin: 10px;
+}
+
+.weather-img img {
+  width: 100%;
+  height: auto;
+  border: 0 solid #eeeeee;
+  border-radius: 50%;
+  object-fit: scale-down;
+}
+.weather-description {
+  font-size: 25px;
+  font-weight: 500;
+}
+.high-low {
+  padding: 20px 5px;
+  font-size: 35px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.space {
+  display: flex;
+  justify-content: center;
+}
+.degrees-high {
+  color: #d02f2c;
+}
+.degrees-low {
+  color: #347de4;
+}
+.today {
+  margin-left: 0;
+}
+.saturday {
+  margin-right: 0;
+}
+
+/* Cookie bits */
+
+.cookie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+  border: 3px solid black;
+  min-height: 200px;
+  padding: 0 30px;
+  bottom: 5%;
+  left: auto;
+  right: 7.5%;
+  width: 80%;
+  position: fixed;
+}
+.cookie-text {
+  padding: 30px;
+}
+.cookie-text h3 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.accept {
+  transition-duration: 0.2s;
+  background-color: #9fc5f8;
+  padding: 5px 10px;
+  min-width: 100px;
+  font-size: large;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 2px 2px black;
+}
+.accept:hover {
+  background-color: #66a7fc;
+  box-shadow: 3px 3px black;
+}
