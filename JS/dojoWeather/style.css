@@ -43,7 +43,7 @@ p {
 .nav {
   /* flex-between */
   background-color: #9fc5f8;
-  padding: 10px 100px;
+  padding: 10px 10%;
   color: white;
   max-width: 1200px;
   min-width: 820px;
@@ -85,6 +85,7 @@ p {
 
 .days {
   /* flex-between */
+  margin: 0 auto;
   padding: 20px 100px;
 }
 
@@ -182,4 +183,30 @@ p {
 .accept:hover {
   background-color: #66a7fc;
   box-shadow: 3px 3px black;
+}
+
+@media (max-width: 37.5em) {
+  body {
+    min-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .main {
+    min-width: 800px;
+  }
+  .days {
+    flex-direction: column;
+  }
+  .nav {
+    min-width: 516px;
+    padding: 10px;
+    object-fit: scale-down;
+  }
+  .main-top {
+    min-width: 100%;
+    margin: 0 auto;
+  }
 }
