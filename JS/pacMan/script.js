@@ -75,102 +75,118 @@ function reSwitchy() {
 }
 
 function addPaths(){
-  for(var i = 2; i < maxWorldSize - 1; i++){
-    for(var j = 2; j < maxWorldSize - 1; j++){
+  for(var i = 2; i <= maxWorldSize - 2; i++){
+    for(var j = 2; j <= maxWorldSize - 2; j++){
       // if spaces above and to left are walls
-      if((world[j - 1][i] == 1 && world[j][i - 1] == 1) && i < maxWorldSize - 2){
-        // make one to right not a wall
-        world[j][i + 1] = notWall;
-        reNotWall();
-        // and make current space not a wall
-        world[j][i] = moreWalls;
-        reNotWall();
-        // if the space above is a wall
-        if(world[j - 1][i] == 1){
-          // make space above not a wall
-          world[j - 1][i] = notWall;
-          // make current space random (but most likely a wall)
+      var top = false;
+      var right = false;
+      var bot = false;
+      var left = false;
+      if(i < maxWorldSize - 2 && j < maxWorldSize - 2){  
+        if((world[j - 1][i] == 1 && world[j][i - 1] == 1) && (i < maxWorldSize - 2 && j < maxWorldSize - 2)){
+          // make one to right not a wall
+          world[j][i + 1] = notWall;
+          reNotWall();
+          // and make current space not a wall
           world[j][i] = moreWalls;
           reNotWall();
-          mostlyWalls();
+          // if the space above is a wall
+          if(world[j - 1][i] == 1){
+            // make space above not a wall
+            world[j - 1][i] = notWall;
+            // make current space random (but most likely a wall)
+            world[j][i] = moreWalls;
+            reNotWall();
+            mostlyWalls();
+          }
+          else if(world[j][i - 1] == 1) {
+            world[j][i - 1] = notWall;
+            world[j][i] = moreWalls;
+            reNotWall();
+            mostlyWalls();
+          }
         }
-        else if(world[j][i - 1] == 1) {
-          world[j][i - 1] = notWall;
-          world[j][i] = moreWalls;
-          reNotWall();
-          mostlyWalls();
+        // if any space around current is a wall
+        else if(world[j - 1][i] == 1 || world[j][i - 1] == 1 || world[j + 1][i] == 1 || world[j][i + 1] == 1){
+          var count = 0;
+          if(world[j - 1][i] == 1){
+            top = true;
+            count++;
+          }
+          if(world[j][i - 1] == 1){
+            left = true;
+            count++;
+          }
+          if(world[j + 1][i] == 1){
+            bot = true;
+            count++;
+          }
+          if(world[j][i + 1] == 1){
+            right = true
+            count++;
+          }
+          // if there's all walls surrounding
+          if(count > 3){
+            // make current a wall
+            world[j][i] = 1;
+            count = 0;
+          }
+          // else if there's no walls surrounding
+          else if(count == 0){
+            // make current a wall
+            world[j][i] = 1;
+            count = 0;
+          }
+          // else if there's 3 walls
+          else if(count > 2){
+            // if there's no wall on top
+            if(top == false){
+              // make current space not a wall
+              world[j][i] = notWall;
+              // create exit at right or bottom
+              world[j + switchy()][i + switchy()] = notWall;
+              reNotWall();
+            }
+            else if(left == false){
+              // make current space not a wall
+              world[j][i] = notWall;
+              // create exit at right or bottom
+              world[j + switchy()][i + switchy()] = notWall;
+              reNotWall();
+            }
+            else if(bot == false){
+              // make current space not a wall
+              world[j][i] = notWall;
+              reNotWall();
+              // create exit at right
+              world[j][i + 1] = notWall;
+              reNotWall();
+            }
+            else if(right == false){
+              // make current space not a wall
+              world[j][i] = notWall;
+              reNotWall();
+              // create exit at bottom
+              world[j + 1][i] = notWall;
+              reNotWall();
+            }
+          }
+          // else if there's less than 2 walls
+          else {
+            world[j][i] = moreWalls;
+            mostlyWalls();
+          }
+        } // else (spaces around current aren't walls)
+        else{
+          // make current a wall and space below and to the right a wall
+          world[j][i] = 1;
+          world[j + 1][i] = 1;
+          world[j][i + 1] = 1;
         }
       }
-      // if any space around current is a wall
-      else if(world[j - 1][i] == 1 || world[j][i - 1] == 1 || world[j + 1][i] == 1 || world[j][i + 1] == 1){
-        // if only space above is a wall
-        if(world[j - 1][i] == 1 && world[j][i - 1] != 1 && world[j + 1][i] != 1 && world[j][i + 1] != 1) {
-          // create random space
-          world[j][i] = moreWalls;
-          mostlyWalls();
-        }
-        //  if only space to left is a wall
-        else if(world[j - 1][i] != 1 && world[j][i - 1] == 1 && world[j + 1][i] != 1 && world[j][i + 1] != 1){
-          // create random space
-          world[j][i] = moreWalls;
-          mostlyWalls();
-        }
-        // if only space below is a wall
-        else if(world[j - 1][i] != 1 && world[j][i - 1] != 1 && world[j + 1][i] == 1 && world[j][i + 1] != 1) {
-          // create random space
-          world[j][i] = moreWalls;
-          mostlyWalls();
-        }
-        // if only space to right is wall
-        else if(world[j - 1][i] != 1 && world[j][i - 1] != 1 && world[j + 1][i] != 1 && world[j][i + 1] == 1){
-          // create random space
-          world[j][i] = moreWalls;
-          mostlyWalls();
-        }
-        // if only spaces below and to right are walls
-        else if(world[j - 1][i] != 1 && world[j][i - 1] != 1 && world[j + 1][i] == 1 && world[j][i + 1] == 1){
-          // create random space
-          world[j][i] = moreWalls;
-          mostlyWalls();
-        }
-        // if only spaces above and to right are walls
-        else if(world[j - 1][i] == 1 && world[j][i - 1] != 1 && world[j + 1][i] != 1 && world[j][i + 1] == 1){
-          // create random space
-          world[j][i] = moreWalls;
-          mostlyWalls();
-        }
-        // if spaces above and to left are walls
-        else if(world[j - 1][i] == 1 && world[j][i - 1] == 1 && world[j + 1][i] != 1 && world[j][i + 1] != 1){
-          // create random space
-          world[j][i] = moreWalls;
-          mostlyWalls();
-        }
-        // if spaces below and to left are walls
-        else if(world[j - 1][i] != 1 && world[j][i - 1] == 1 && world[j + 1][i] == 1 && world[j][i + 1] != 1){
-          // create random space
-          world[j][i] = moreWalls;
-          mostlyWalls();
-        }
-        // if all spaces are walls, create anything except a wall + create change
-        // space above or to the left to be not a wall
-        else {
-          world[j][i] = notWall;
-          world[j - switchy()][i - switchy()] = notWall;
-          reSwitchy();
-          reNotWall();
-        }
-      } // else (spaces around current aren't walls)
       else {
-        // make current a wall and space below and to the right a wall
-        world[j][i] = 1;
-        world[j + switchy()][i + switchy()] = 1;
-        switchy();
-        world[j + switchy()][i + switchy()] = 1;
-        reSwitchy();
-      }
-      if(i == 9 || j == 9){
         world[i][j] = notWall;
-        reNotWall;
+        reNotWall();
       }
       // if spaces below or to right are walls
     }
