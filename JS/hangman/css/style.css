@@ -1,0 +1,87 @@
+body {
+  background-color: #001120;
+}
+
+.container {
+  width: 70%;
+  margin-inline: auto;
+  transform: translateY(-3em);
+}
+
+.grid {
+  display: grid;
+  place-content: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 1em;
+  letter-spacing: .25rem;
+}
+
+.btn {
+  border: 0;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+}
+
+.hangman {
+  flex: 1;
+}
+
+.play {
+  flex: 1;
+}
+
+.card {
+  padding: 1.25rem;
+  border-radius: .5rem;
+  background-color: #00427b;
+  border: 1px solid rgb(23, 23, 30);
+}
+
+.tile {
+  border: 0;
+  color: #252525;
+  font-size: 1.25rem;
+  width: 2.75rem;
+  aspect-ratio: 1 / 1;
+  border-radius: .5rem;
+  background-color: whitesmoke;
+  box-shadow: 3px 3px black;
+}
+
+.incorrect {
+  opacity: .75;
+  background-color: red;
+}
+
+.correct {
+  opacity: .75;
+  background-color: yellowgreen;
+}
+
+.hoverable {
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+}
+
+.hoverable:hover {
+  transform: scale(1.1);
+}
+
+#blanks {
+  margin-top: 1.25rem;
+}
